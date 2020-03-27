@@ -14,6 +14,7 @@
   
   <body style="background-color: yellow;">
 
+<!-- Header -->
     <div class="row justify-content-center">
     <div class="col-8 text-center">
         <header>
@@ -23,16 +24,20 @@
     </div>
     </div>
 
+<!-- Area for saving burgers and pressing button to devour -->
     <div class="row justify-content-center">
     <div class="container col-6 text-center">
-        <input type="text"></input>
-        <button class="btn btn-sm btn-secondary mt-3">Devour It!</button>
+        <input class="d-none" type="text"></input>
+        <button class="btn btn-sm btn-secondary mt-3 d-none">Devour It!</button>
     </div>
+
+<!-- Area for rendering devoured burgers -->
     <div class="container col-6 text-center">
-        <p>PLACEHOLDER</p>
+        <p class="d-none">PLACEHOLDER</p>
     </div>
     </div>
 
+<!-- Area to sumbit new burger order -->
     <div class="row justify-content-center mt-3">
     <div class="col-8 text-center">
         <input type="text"></input>
