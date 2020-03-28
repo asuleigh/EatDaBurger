@@ -1,7 +1,7 @@
 USE employeetrackerdb;
 
-INSERT into burgers (burger_Name) VALUES ("Classic Burger");
+INSERT into burgers (burger_name, devoured) VALUES ("Classic Burger", true);
 
-INSERT into burgers (burger_Name) VALUES ("Bacon Cheeseburger");
+INSERT into burgers (burger_name, devoured) VALUES ("Bacon Cheeseburger", false);
 
-INSERT into burgers (burger_Name) VALUES ("Vegan Burger");
+INSERT into burgers (burger_name, devoured) VALUES ("Vegan Burger", true);
