@@ -1,9 +1,7 @@
-// Pull in required dependencies
-
-// Pull in required dependencies
+// Requirements
 var express = require('express');
-var bodyParser = require('body-parser');
-var exphbs = require('express-handlebars');
+    bodyParser = require('body-parser');
+    exphbs = require('express-handlebars');
 // Requirement for method-override for post route
 var methodOverride = require('method-override');
 
