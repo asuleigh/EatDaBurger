@@ -1,4 +1,5 @@
 # [Eat-Da-Burger!](https://asuleigh.github.io/EatDaBurger)
+A burger logger created with MySQL, Node, Express, Handlebars and a homemade ORM.
 
 ### Links
 [Eat-Da-Burger Heroku](https://asuleigh.github.io/EatDaBurger/)
