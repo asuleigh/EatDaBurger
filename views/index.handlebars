@@ -1,0 +1,53 @@
+<!-- Header -->
+    <div class="row justify-content-center">
+    <div class="col-8 text-center">
+        <header>
+            <img src="burger.png" style="height: 200px; width: 200px;"></img>
+            <h1 style="color:red;">Eat-Da-Burger!</h1>
+        </header>
+    </div>
+    </div>
+
+<!-- Area for saving burgers and pressing button to devour -->
+    <div class="row justify-content-center">
+    <div class="container col-6 text-center">
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        <div>
+            <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+            <input type="text"> {{this.burger_name}}
+            <button class='burgerAvailable btn btn-sm btn-secondary mt-3 d-none'>
+                Devour It!
+            </button>
+            </input>
+            </form>
+        </div>
+        {{/unless}}
+        {{/each}}
+    </div>
+
+<!-- Area for rendering devoured burgers -->
+    <div class="container col-6 text-center">
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <div class='burgerEaten'>
+              <div>
+                {{this.burger_name}}
+              </div>
+            </div>
+          {{/if}}
+        {{/each}}
+    </div>
+    </div>
+
+<!-- Area to sumbit new burger order -->
+    <div class="row justify-content-center mt-3">
+    <div class="col-8 text-center">
+        <form action="/burgers" method="POST">
+        <input type="text" id="name" name="burger_name" placeholder="Super Original Burger">
+        <br>
+        <button type="submit" class="addBurgerButton btn btn-primary mt-3">Sumbit</button>
+        </form>
+        <p>Enter a burger you want to eat and click the "Submit" button</p>
+    </div>
+    </div>
