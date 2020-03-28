@@ -5,11 +5,8 @@
         {{#unless this.devoured}}
         <div>
             <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-            <input type="text"> {{this.burger_name}}
-            <button class='burgerAvailable btn btn-sm btn-secondary mt-3 d-none'>
-                Devour It!
-            </button>
-            </input>
+                <span style="color:red;">{{this.burger_name}}</span>
+                <button type="submit" class='burgerAvailable btn btn-sm btn-secondary'> DEVOUR IT! </button>
             </form>
         </div>
         {{/unless}}

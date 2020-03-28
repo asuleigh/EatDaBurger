@@ -1,23 +1,30 @@
 // Pull in required dependencies
+
+// Pull in required dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
-var exphbs = require("express-handlebars");
+var exphbs = require('express-handlebars');
+// Requirement for method-override for post route
+var methodOverride = require('method-override');
 
 var PORT = process.env.PORT || 8080;
 
 var app = express();
 
-app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// Static content
+app.use(express.static(process.cwd() + '/public'));
+app.use(bodyParser.urlencoded({ extended: false }));
+// Override with POST having ?_method=DELETE
+app.use(methodOverride('_method'));
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// Set view engine as handlebars
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
 
-// Import routes 
-var routes = require("./controllers/burgers_controller.js");
+// Import routes
+var routes = require('./controllers/burgers_controller.js');
 
-app.use(routes);
+app.use('/', routes);
 
 app.listen(PORT, function() {
     // Log (server-side) when our server has started
