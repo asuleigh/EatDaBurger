@@ -2,7 +2,7 @@
 A burger logger created with MySQL, Node, Express, Handlebars and a homemade ORM.
 
 ### Links
-[Eat-Da-Burger Heroku](https://asuleigh.github.io/EatDaBurger/)
+[Eat-Da-Burger Heroku](https://calm-cliffs-22702.herokuapp.com/)
 <br>
 [Eat-Da-Burger GitHub](https://asuleigh.github.io/EatDaBurger/)
 <br>
